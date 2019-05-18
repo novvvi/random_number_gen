@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>random number guessing</title>
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .row {
+            display: block;
+            text-align: center;
+            margin: 8% auto 10px auto;
+            width: 40%;
+            height: auto;
+        }
+
+        .row1 {
+            display: block;
+            text-align: center;
+            margin: 10px auto 30px auto;
+            border: solid black 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h3>Random word (attempt : {{ request.session.count }})</h3>
+            <div class="row1">
+                <h1> {{ request.session.random }}</h1>
+            </div>
+            <a href="/random"><button type="button">Generate</button></a>
+            <a href="/reset"><button type="button">reset</button></a>
+        </div>
+    </div>
+    
+</body>
+</html>
